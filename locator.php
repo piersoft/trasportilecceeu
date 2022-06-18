@@ -168,7 +168,7 @@ z-index:0;
 
 <div id="infodiv" style="leaflet-popup-content-wrapper">
   <p><b>Trasporti SGM Comune di Lecce<br></b>
-  Mappa con fermate, linee e orari dei Bus dei TPL della <a href="https://www.sgmlecce.it/">SGM spa</a>. <a href="http://www.piersoft.it/"> by @piersoft.</a></br>GTFS Lic. CC-BY <a href="http://dati.comune.lecce.it/dataset/trasporto-pubblico-locale">OpenData Comune di Lecce</a></p>
+  Mappa con fermate, linee e orari dei Bus dei TPL della <a href="https://www.sgmlecce.it/">SGM spa</a>.</br><a href="https://github.com/piersoft/trasportilecceeu"> GitHub by @piersoft.</a>. GTFS Lic. CC-BY <a href="http://dati.comune.lecce.it/dataset/trasporto-pubblico-locale">OpenData Comune di Lecce</a></p>
 </div>
 <div id="logo" style="leaflet-popup-content-wrapper">
 <a href="https://www.piersoft.it/trasportilecceeu/" target="_blank"><img src="logo.png" width="40px" title="localizzami" alt="localizzami"></a>
@@ -332,7 +332,7 @@ z-index:0;
                  contenedor.innerHTML += '<iframe width="180%" height="600" src="tmpf.php?id='+fermatadipinta+'&sname='+name+'" frameborder="0" allowfullscreen></iframe>';
                 //  contenedor.innerHTML += '<iframe width="180%" height="550" src="tmp.php?id='+fermatadipinta+'&sname='+name+'&stop_ids='+stop_ids+'&stop_arrives='+stop_arrives+'&trip_ids='+trip_ids+'&route_short_namer='+route_short_namer+'&route_long_namer='+route_long_namer+'&route_idr='+route_idr+'&service_idc='+service_idc+'&trip_idt='+trip_idt+'&service_idt='+service_idt+'&route_idt='+route_idt+'&calendar_monday='+calendar_monday+'&start_date='+start_date+'&end_date='+end_date+'" frameborder="0" allowfullscreen></iframe>';
                   contenedor.innerHTML += '<b>  <a width="100%" href="fermata.php?id='+fermatadipinta+'&name='+name+'">Link permanente alla Palina: '+fermatadipinta+'</a></b>';
-            
+
                   sidebar.show();
                 }
                 //finishedLoadinglong(corse);
