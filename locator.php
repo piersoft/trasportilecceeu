@@ -6,6 +6,7 @@ $r=$_GET["r"];
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="it">
   <head>
@@ -23,18 +24,18 @@ $r=$_GET["r"];
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.piersoft.it/covid19/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="https://www.piersoft.it/covid19/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.piersoft.it/covid19/favicon-16x16.png">
-  <link rel="stylesheet" href="http://necolas.github.io/normalize.css/2.1.3/normalize.css" />
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/2.1.3/normalize.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-   <link rel="stylesheet" href="http://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.css" />
+  <link rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.5/leaflet.css" />
+   <link rel="stylesheet" href="https://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.css" />
    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="MarkerCluster.css" />
         <link rel="stylesheet" href="MarkerCluster.Default.css" />
         <meta property="og:image" content="http://www.piersoft.it/trasportilecceeu/bus_.png"/>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-<script src="http://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
+  <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.5/leaflet.js"></script>
+<script src="https://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
    <script src="leaflet.markercluster.js"></script>
-   <script src="http://joker-x.github.io/Leaflet.geoCSV/lib/jquery.js"></script>
+   <script src="https://joker-x.github.io/Leaflet.geoCSV/lib/jquery.js"></script>
    <meta property="og:image" content="http://www.piersoft.it/trasportilecceeu/bus_.png"/>
 
 <script type="text/javascript">
