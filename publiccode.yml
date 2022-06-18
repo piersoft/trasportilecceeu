@@ -1,0 +1,84 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+applicationSuite: Trasporti Lecce
+categories:
+  - data-visualization
+  - data-collection
+  - fleet-management
+description:
+  it:
+    documentation: 'https://github.com/piersoft/trasportilecceeu/blob/main/README.md'
+    features:
+      - |-
+        Il software visualizza solo i GTFS con gli orari pianificati e genera
+        per ogni fermata anche un QR
+    genericName: Trasporti Lecce
+    localisedName: Trasporti Lecce
+    longDescription: |
+      Mappa interattiva dei trasporti di Lecce. Cliccando su una fermata si
+      hanno gli orari del prossimo passaggio dei bus urbani. Riusa i GTFS
+      rilasciati dal [Comune di
+      Lecce](http://dati.comune.lecce.it/dataset/trasporto-pubblico-locale) in
+      Lic. CCBY 4.0.
+
+
+      Sostituendo i file GTFS nella dir gtfs/lecce e lanciano lo script come da
+      Readme, è riusabile in ogni Comune. 
+
+
+      Il codice nasce per https per permettere la georeferenzazione, su
+      richiesta, dell'utente.
+
+
+      Se non è richiesta o disponibile si può mandare direttamente l'utente
+      sulla landing page passando parametri "lat" e "lon" a piacimento.
+
+
+      [Esempio](https://www.piersoft.it/trasportilecceeu/locator.php?lat=40.346118920850095&lon=18.16610813140869)
+    shortDescription: Mappa interattiva dei trasporti di Lecce
+developmentStatus: stable
+intendedAudience:
+  countries:
+    - it
+  scope:
+    - transportation
+    - tourism
+it:
+  conforme:
+    gdpr: false
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: true
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+landingURL: |-
+  https://www.piersoft.it/trasportilecceeu/locator.php?lat=40.346118920850095&lon=18.16610813140869
+legal:
+  license: MIT
+  mainCopyrightOwner: Francesco Piero Paolicelli
+  repoOwner: piersoft
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: false
+maintenance:
+  contacts:
+    - email: piersoft@icloud.com
+      name: FRANCESCO PAOLICELLI
+      phone: '+393355226012'
+  type: internal
+name: Trasporti Lecce
+platforms:
+  - web
+  - linux
+releaseDate: '2022-06-18'
+softwareType: standalone/desktop
+softwareVersion: '1.0'
+url: 'https://github.com/piersoft/trasportilecceeu'
