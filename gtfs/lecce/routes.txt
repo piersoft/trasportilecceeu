@@ -1,0 +1,24 @@
+route_id,agency_id,route_short_name,route_long_name,route_type
+40,104,M1,City Terminal  >> Stazione FS,3
+42,104,C2,Circolare Destra,3
+43,104,C3,Circolare Sinistra,3
+44,104,R4,P.le Cuneo >> Costa,3
+46,104,R5,P.zza M.T. di Calcutta >> Costa,3
+48,104,R6,Sordi >> Castello,3
+50,104,R7,Tempi Nuovi >> Castello,3
+51,104,R8,Ospedale >> Stazione FS,3
+53,104,R9,Borgo Pace >> Costa,3
+55,104,R10,D'Andrea - Ghezzi >> Costa,3
+58,104,R11,Ospedale >> Castello,3
+61,104,S12,City Terminal >> Casa Circondariale,3
+62,104,S14,Porta Napoli >> Giorgilorio,3
+64,104,S13,City Terminal >> Ecotekne-Fiorini,3
+66,104,S15,Villa Convento >> Porta Napoli,3
+68,104,S18,City Terminal >> Torre Chianca,3
+70,104,S17,City Terminal >> Frigole,3
+72,104,AG,City Terminal  >> Columella,3
+74,104,S16,Costa >>  San Cataldo,3
+76,104,S19,City Terminal >> Torre Rinalda,3
+89,104,S19,City Terminal  >>  Torre Rinalda,3
+90,104,S16,Costa  >>   San Cataldo,3
+92,104,S17,City Terminal  >>  Frigole,3
