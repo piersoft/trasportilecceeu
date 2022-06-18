@@ -4,7 +4,7 @@ session_start();
 if(isset($_POST['submit_pass']) && $_POST['pass'])
 {
  $pass=$_POST['pass'];
- if($pass=="20122002")
+ if($pass=="passwordiniziale")
  {
   $_SESSION['password']=$pass;
  }
