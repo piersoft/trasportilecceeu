@@ -13,7 +13,7 @@ Con la creazione del file (geo)json iniziae, si creano non solo i pin sulla mapp
 
 Il file fermate.php è file che elabora gli incroci dei file GTFS partendo dallo stop_id/stop_code. 
 
-Il parametro può essere passato sia perchè l'utent ha cliccato il pin della fermata (viene richiamato tmpf.php per gestiore il loading gif) sia direttamente digitando id=114&name=Stazione%20FS (name è opzionale).
+Il parametro può essere passato sia perchè l'utente ha cliccato il pin della fermata (viene richiamato tmpf.php per gestiore il loading gif) sia direttamente digitando fermata.php?id=114&name=Stazione%20FS (name è opzionale).
 
 Questa caratteristica è stata inserita perchè in alcuni quartieri di Lecce, in attività di Civic Hacking, verranno incollati adesivi con il QR Code per ciascuna fermata in modo che inquadrandolo si hanno gli orari pianificati.
 
