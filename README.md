@@ -17,15 +17,22 @@ Il parametro può essere passato sia perchè l'utente ha cliccato il pin della f
 
 Questa caratteristica è stata inserita perchè in alcuni quartieri di Lecce, in attività di Civic Hacking, verranno incollati adesivi con il QR Code per ciascuna fermata in modo che inquadrandolo si hanno gli orari pianificati.
 
-Il file fermata.php ha alcune "costanti" che sono le posizioni in cui , nei file trips.txt, routes.txt e stops.txt :
+Il file fermata.php ha alcune "costanti" che sono le posizioni in cui , nei file trips.txt, routes.txt e stops.txt, ci sono i campi che sono interessati dal match :
 
 ....
+
 $idname="";
+
 $trip_idt="2";
+
 $direction_id="4";
+
 $service_idt="1";
+
 $route_idt="0";
+
 .....
+
 
 dove ad esempio $trip_idt="2" vuol dire che nel file trips.txt nella posizione 2 (partendo da 0) hai il campo trip_id e così via.
 Quasi tutti i GTFS provati hanno queste posizioni e standard.
