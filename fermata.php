@@ -49,6 +49,7 @@ $nome=htmlspecialchars($_GET["name"]);
 //$idstop="295"; //54 stazione // 295 Nocco
 $idname="";
 $trip_idt="2";
+$direction_id="4";
 $service_idt="1";
 $route_idt="0";
 $service_idc="0";
@@ -76,6 +77,7 @@ function get_corse($corsa)
   GLOBAL $service_idt;
     GLOBAL $trip_idt;
       GLOBAL $route_idt;
+            GLOBAL $direction_id;
       $corsa=trim($corsa);
     //  $titolo=str_replace("à","%E0",$titolo);
     //  $corsa1="".$corsa;
@@ -123,7 +125,12 @@ function get_corse($corsa)
       }
     //    $homepage1c =get_calendar($csv[$i][$service_idt]);
       //  echo "homepage ".$homepage1c."</br>";
-    if ($homepage1c==true) $homepage =get_linee($csv[$i][$route_idt]);
+    if ($homepage1c==true){
+      if ($csv[$i][$direction_id]==0) {
+        $dir="-->";
+      }else $dir="<--";
+      $homepage =get_linee($csv[$i][$route_idt],$dir);
+    }
       //  else $homepage =get_linee($csv[$i][0])." nel giorno ".$homepage1c." </br>";
 }
     }
@@ -221,7 +228,7 @@ function get_calendar($linea)
       }
   return   $homepage1;
   }
-function get_linee($linea)
+function get_linee($linea,$dir)
     {
       GLOBAL $route_idr;
       GLOBAL $route_short_namer;
@@ -258,7 +265,7 @@ function get_linee($linea)
 
       if ($filter1==$linea){
       //  echo $filter1."</br>";
-
+      $csv1[$ii][$route_long_namer]=str_replace(">>",$dir,$csv1[$ii][$route_long_namer]);
       $homepage1="<a href='https://www.transit.land/routes/r-srhvt-".strtolower($csv1[$ii][$route_short_namer])."' target='_blank'>".$csv1[$ii][$route_short_namer]."</a> (".$csv1[$ii][$route_long_namer].")";
 //echo $homepage1;
     //  $homepage1 =$csv1[$ii][$route_short_namer]." -> (".$csv1[$ii][$route_long_namer].")";
