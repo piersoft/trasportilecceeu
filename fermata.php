@@ -127,8 +127,8 @@ function get_corse($corsa)
       //  echo "homepage ".$homepage1c."</br>";
     if ($homepage1c==true){
       if ($csv[$i][$direction_id]==0) {
-        $dir="-->";
-      }else $dir="<--";
+        $dir="<--";
+      }else $dir="-->";
       $homepage =get_linee($csv[$i][$route_idt],$dir);
     }
       //  else $homepage =get_linee($csv[$i][0])." nel giorno ".$homepage1c." </br>";
