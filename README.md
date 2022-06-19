@@ -10,9 +10,13 @@ I dati dei trasporti sono forniti dal Comune di Lecce in Lic. CCBY 4.0
 
 Logica:
 Con la creazione del file (geo)json iniziae, si creano non solo i pin sulla mappa relativi alle fermate ma si inseriscono anche altre proprietà come il nome, stop_id, stop_code ect
-il file fermate.php è file che elabora gli incroci dei file GTFS partendo dallo stop_id/stop_code. 
+
+Il file fermate.php è file che elabora gli incroci dei file GTFS partendo dallo stop_id/stop_code. 
+
 Il parametro può essere passato sia perchè l'utent ha cliccato il pin della fermata (viene richiamato tmpf.php per gestiore il loading gif) sia direttamente digitando id=114&name=Stazione%20FS (name è opzionale).
+
 Questa caratteristica è stata inserita perchè in alcuni quartieri di Lecce, in attività di Civic Hacking, verranno incollati adesivi con il QR Code per ciascuna fermata in modo che inquadrandolo si hanno gli orari pianificati.
+
 Il file fermata.php ha alcune "costanti" che sono le posizioni in cui , nei file trips.txt, routes.txt e stops.txt :
 
 ....
