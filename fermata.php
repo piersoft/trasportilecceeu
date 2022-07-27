@@ -283,6 +283,10 @@ GLOBAL $stop_code;
       date_default_timezone_set("Europe/Rome");
       $ora=date("H:i:s", time());
       $ora2=date("H:i:s", time()+ 60*60);
+    if($ora >= 23 && $ora2 <= 1){
+        $ora2="24:00:00";
+        $ora3 = date("H:i:s", time()+ 60*60);
+      }
     //    $ora2="10:30:00"; //debug
   //      $ora="09:30:00";
       $linea=trim($linea);
@@ -341,6 +345,27 @@ GLOBAL $stop_code;
         // echo "linea".$distanza[$i]['linea'];
           }
         }
+          
+        // 23.00 - 23.59
+        if ($ora2 =="24:00:00" && $csv[$i][$stop_arrives] <=$ora3) {
+          
+          $filter1= $csv[$i][$stop_ids];
+
+          //echo $filter1;
+        if ($filter1==$linea){
+        //   array_push($distanza[$i]['orario'],$csv[$i][1]);
+        $distanza[$i]['orario']=$csv[$i][$stop_arrives];
+
+          $distanza[$i]['linea']=get_corse($csv[$i][$trip_ids]);
+          $distanza[$i]['linea']=str_replace(">>","<->",$distanza[$i]['linea']);
+          $c++;
+
+        // echo "linea".$distanza[$i]['linea'];
+        }
+        }
+          
+          
+          
           }
       if ($c == 0){
         $homepage1="<b>Non ci sono corse nella prossima ora</b>";
