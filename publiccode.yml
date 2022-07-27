@@ -8,6 +8,8 @@ categories:
   - data-visualization
   - data-collection
   - fleet-management
+usedBy:
+  - Comune di Messina  
 description:
   it:
     documentation: 'https://github.com/piersoft/trasportilecceeu/blob/main/README.md'
