@@ -373,7 +373,9 @@ GLOBAL $stop_code;
       if ($c > 80){
         $homepage1="errore_generico_linea";
       }
+      if($distanza != null){
       sort($distanza);
+      }
       //echo $c;
     //  var_dump($distanza);
     $risposta =0;
