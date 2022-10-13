@@ -127,8 +127,8 @@ function get_corse($corsa)
       //  echo "homepage ".$homepage1c."</br>";
     if ($homepage1c==true){
       if ($csv[$i][$direction_id]==0) {
-        $dir="<--";
-      }else $dir="-->";
+        $dir="-->";
+      }else $dir="<--";
       $homepage =get_linee($csv[$i][$route_idt],$dir);
     }
       //  else $homepage =get_linee($csv[$i][0])." nel giorno ".$homepage1c." </br>";
@@ -283,12 +283,12 @@ GLOBAL $stop_code;
       date_default_timezone_set("Europe/Rome");
       $ora=date("H:i:s", time());
       $ora2=date("H:i:s", time()+ 60*60);
-    if($ora >= 23 && $ora2 <= 1){
+    //    $ora2="10:30:00"; //debug
+  //      $ora="09:30:00";
+  if($ora >= 23 && $ora2 <= 1){
         $ora2="24:00:00";
         $ora3 = date("H:i:s", time()+ 60*60);
       }
-    //    $ora2="10:30:00"; //debug
-  //      $ora="09:30:00";
       $linea=trim($linea);
       $corsa1="".$linea;
       $stop_code;
@@ -339,16 +339,16 @@ GLOBAL $stop_code;
           $distanza[$i]['orario']=$csv[$i][$stop_arrives];
 
             $distanza[$i]['linea']=get_corse($csv[$i][$trip_ids]);
-            $distanza[$i]['linea']=str_replace(">>","<->",$distanza[$i]['linea']);
+            $distanza[$i]['linea']=str_replace("<<","<->",$distanza[$i]['linea']);
             $c++;
 
         // echo "linea".$distanza[$i]['linea'];
           }
         }
-          
-        // 23.00 - 23.59
+           //PROVA AGGIUNTA ORARIO MEZZANOTTE MESSINA
+        //Qui entra solo nella fascia 23.00 - 23.59
         if ($ora2 =="24:00:00" && $csv[$i][$stop_arrives] <=$ora3) {
-          
+          //$homepage1="PIZZA"; //debug
           $filter1= $csv[$i][$stop_ids];
 
           //echo $filter1;
@@ -357,15 +357,12 @@ GLOBAL $stop_code;
         $distanza[$i]['orario']=$csv[$i][$stop_arrives];
 
           $distanza[$i]['linea']=get_corse($csv[$i][$trip_ids]);
-          $distanza[$i]['linea']=str_replace(">>","<->",$distanza[$i]['linea']);
+          $distanza[$i]['linea']=str_replace("<<","<->",$distanza[$i]['linea']);
           $c++;
 
         // echo "linea".$distanza[$i]['linea'];
         }
         }
-          
-          
-          
           }
       if ($c == 0){
         $homepage1="<b>Non ci sono corse nella prossima ora</b>";
@@ -382,7 +379,6 @@ GLOBAL $stop_code;
       for ($ii=0;$ii<$c;$ii++)
       {
         if (strpos($distanza[$ii]['linea'],')') !== false){
-
 
 
         $homepage1 .="Linea 🚌 ".$distanza[$ii]['linea']."</br>🕜 ".$distanza[$ii]['orario']."<br>---------<br>";
