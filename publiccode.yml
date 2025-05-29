@@ -10,6 +10,7 @@ categories:
   - fleet-management
 usedBy:
   - Comune di Messina  
+  - Infantebus
 description:
   it:
     documentation: 'https://github.com/piersoft/trasportilecceeu/blob/main/README.md'
