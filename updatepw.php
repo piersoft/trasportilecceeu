@@ -166,7 +166,21 @@ if($_SESSION['password']=="20122002")
  $file = "json/mappaf.json";
  write($file,$geostring);
  //echo "finito";
+ $gtfsDir    = '/usr/www/piersoft/trasportilecce/gtfs/taranto';
+ $outputFile = '/usr/www/piersoft/trasportitlecce/json/routes.geojson';
+ $script     = '/usr/www/piersoft/trasportilecce/gtfs_shapes_to_geojson.php';
 
+ $cmd = escapeshellcmd("php $script")
+      . ' ' . escapeshellarg($gtfsDir)
+      . ' ' . escapeshellarg($outputFile);
+
+ exec($cmd . ' 2>&1', $output, $returnCode);
+
+ if ($returnCode === 0) {
+     echo "OK: " . implode("\n", $output);
+ } else {
+     echo "ERRORE (exit $returnCode): " . implode("\n", $output);
+ }
 
 }
 else
