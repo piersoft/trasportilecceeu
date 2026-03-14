@@ -395,6 +395,7 @@ GLOBAL $stop_code;
     }
     echo "<h4>Se presente, clicca sulla linea per avere il percorso<h4>";
    // echo "<br><img src='https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https%3A%2F%2Fwww.piersoft.it%2Fgtfstutorial%2Ffermata.php?id='+$idstop+'&choe=UTF-8' title='QR-Code diretto' />";
+    echo "<br><img src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fwww.piersoft.it%2Ftrasportilecceeu%2Ffermata.php?id='+id_stop+'' title='QR-Code diretto' />";
 
     echo "<br><small>Lic. CCBY <a href='http://dati.comune.lecce.it/dataset/trasporto-pubblico-locale'>OpenData</a> Comune di Lecce. Powered by Piersoft</small>";
   ?>
