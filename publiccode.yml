@@ -2,7 +2,7 @@
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/italia/publiccode.yml
 
-publiccodeYmlVersion: '0.4'
+publiccodeYmlVersion: '0.5'
 applicationSuite: Trasporti Lecce
 categories:
   - data-visualization
@@ -51,7 +51,7 @@ intendedAudience:
     - tourism
 it:
   conforme:
-    gdpr: false
+    gdpr: true
     lineeGuidaDesign: false
     misureMinimeSicurezza: true
     modelloInteroperabilita: false
@@ -83,5 +83,5 @@ platforms:
   - linux
 releaseDate: '2022-06-18'
 softwareType: standalone/desktop
-softwareVersion: '1.0'
+softwareVersion: '1.1'
 url: 'https://github.com/piersoft/trasportilecceeu'
