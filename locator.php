@@ -432,7 +432,22 @@ z-index:0;
 
       }
 
-      $.getJSON("json/routes.geojson", function(data) { addDataToMapUCL(data, map); });
+      // Versione compatibile con tutte le versioni di Leaflet
+      var geoJsonLayer = (L.geoJSON || L.geoJson);
+
+      fetch('json/routes.geojson')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          geoJsonLayer(data, {
+            style: function(f) {
+              return {
+                color:   f.properties.stroke,
+                weight:  f.properties['stroke-width'],
+                opacity: f.properties['stroke-opacity']
+              };
+            }
+          }).addTo(map);
+        });
 
   </script>
 
